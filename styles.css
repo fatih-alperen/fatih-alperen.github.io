@@ -87,3 +87,18 @@ footer {
     color: #9b8265;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.code-block {
+    background: #1e1e1e; /* Dark background for contrast */
+    color: #c47d3b; /* Warm, dimmed color for text */
+    font-family: 'Courier New', monospace;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    white-space: pre-wrap; /* Keeps line breaks but wraps text */
+    box-shadow: 0 0 10px rgba(100, 80, 50, 0.2);
+}
+
+.code-block code {
+    font-size: 14px;
+}

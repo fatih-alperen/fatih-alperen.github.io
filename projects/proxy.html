@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very simple proxy setup (for free!)</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Very simple proxy setup (for free!)</h1>
+        <h2>Story</h2>
+        <p>
+            This was my most recent project. 
+            Due to government acting for my best interest and having my back and protecting me from evil, 
+            I was not able to access some parts of the internet I frequent. 
+            At first I was using a VPN service, but that got blocked on the university network. 
+            I had to get creative.
+        </p>
+        <p>
+            I know stuff about internet. And I knew I just needed some computer from a less "protective" country to tunnel my traffic over. 
+            I searched the internet for a free server and found out that Oracle has an "alwas free" tier for their cloud services. 
+            Having accidentally paid some money to Amazon because of a forgotten instance I created for homework, 
+            I decided to try this always free thing.
+        </p>
+        <p> 
+            It was a bit hard to get a server from Oracle but I finally managed to get something that remotely resembled a computer. 
+            Then I asked ChatGPT how to set up a proxy and it told me that the simplest approach would be an ssh tunnel. 
+            With one command, was able to tunnel my traffic over my little German proxy server. 
+            The browser I was using did not have the proxy settings I needed, so I had to use firefox.
+            <br>
+            Now when using firefox, I am as unprotected as a German on the internet. 
+        </p>
+        <h2>How to</h2>
+        <p>
+            First you need to get a server. 
+            I used Oracle's always free tier. 
+            Then you need to install ssh on your computer. 
+            If you are on linux, you probably already have it. 
+            If you are on windows, you can install it from the windows store. 
+        </p>
+        <p>
+            To connect to the server, you will probably need an ssh key. 
+            If you are connecting with a password, I recommend at least setting up a key.
+            The way I set this up uses a key for convenience but using a key is better practice for security aswell. 
+            After generating the key, you can also edit your .ssh/config file to make everything much easier.
+        </p>
+        <p>
+            Then you need to run the following command:
+        </p>
+        <pre><code>
+            ssh -D 8080 -q -C -N user@server
+        </code>
+        </pre>
+        <p>
+            This command will create a socks proxy on your computer on port 8080. 
+            You can then set your browser to use this proxy. 
+            In firefox, you can do this by going to settings, searching for proxy, and then setting the socks proxy to localhost:8080.
+        </p>
+        <p>
+            And that's it. 
+            You can also check out my <a href="https://github.com/fatih-alperen/simple-ssh-tunnel">GitHub repo</a> for a convenience script I (made ChatGPT) wrote for this with instructions.
+        </p>
+        <a href="../index.html" class="back-button">← Back to Homepage</a>
+    </div>
+    <footer>
+        <p>fatih.on.wired</p>
+    </footer>
+</body>
+</html>
