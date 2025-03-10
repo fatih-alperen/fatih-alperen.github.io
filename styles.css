@@ -1,0 +1,89 @@
+/* Global Styles */
+html, body {
+    background-color: #000; /* True black for OLED efficiency */
+    color: #c6a679; /* Warm goldish text for readability */
+    font-family: 'Inter', sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+    background: #131313; /* Dark, but slightly raised from pure black */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(200, 150, 80, 0.15); /* Subtle golden glow */
+    flex: 1;
+}
+
+/* Headings */
+h1, h2 {
+    color: #e6b450; /* Warm golden orange */
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(230, 180, 80, 0.5);
+}
+
+p {
+    line-height: 1.6;
+    color: #d9c8a9; /* Softer beige for body text */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #c47d3b; /* Burnt orange/gold for links */
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #ffb347; /* Brighter warm tone */
+    text-shadow: 0 0 8px rgba(255, 180, 80, 0.5);
+}
+
+/* Accent Lines */
+.accent-line {
+    border-bottom: 2px solid #8c3b3b; /* Deep rust red */
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+/* Warning Text */
+.warning {
+    color: #ff4444; /* Strong red for warnings */
+    font-weight: bold;
+    text-shadow: 0 0 6px rgba(255, 68, 68, 0.7);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background: #502c14; /* Rich copper brown */
+    color: #fff;
+    padding: 12px 24px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background: #6a3a1d; /* Brighter copper */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #9b8265;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
